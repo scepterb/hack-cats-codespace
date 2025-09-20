@@ -3,6 +3,9 @@ FROM ubuntu:22.04
 # common docker line that ensures package managers run w/o user input
 ARG DEBIAN_FRONTEND=noninteractive
 
+# Create a non-root user 'vscode' (Codespaces uses 'vscode' by convention)
+RUN groupadd -r vscode && useradd -m -r -g vscode vscode
+
 # Install core packages (edit/remove as you like)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential curl wget git ca-certificates apt-transport-https gnupg lsb-release \
