@@ -2,8 +2,13 @@
 // https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers
 {
     "name": "Ignatius Hack Cats Codespace",
-    "build": { "dockerfile": "Dockerfile" },
+    "build": { 
+		"dockerfile": "Dockerfile",
+		"context": "."
+	},
 
+	"remoteUser": "vscode",
+	"runArgs": ["--init"],
     "customizations": {
         "vscode": {
             "extensions": [
@@ -13,6 +18,5 @@
                 "ms-vscode-remote.remote-containers"
             ]
         }
-    },
-    "workspaceFolder": "/workspace"
+    }
 }
