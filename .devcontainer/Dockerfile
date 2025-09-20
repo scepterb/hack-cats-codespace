@@ -18,18 +18,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN python3 -m pip install --no-cache-dir --upgrade pip setuptools
 
 # Put install script into container and make it executable
-COPY install-tools.sh /tmp/install-tools.sh
-RUN chmod +x /tmp/install-tools.sh
+COPY install-ctf-tools.sh /tmp/install-ctf-tools.sh
+RUN chmod +x /tmp/install-ctf-tools.sh
 
 # Allow non-root user to run the install script during devcontainer postCreate
-RUN chown -R vscode:vscode /tmp/install-tools.sh
+RUN chown -R vscode:vscode /tmp/install-ctf-tools.sh
 
 # Switch to non-root user for the workspace
 USER vscode
 WORKDIR /workspace
 
 # Make the script available in the workspace so postCreateCommand can run it
-RUN mkdir -p /workspace/.devcontainer && cp /tmp/install-tools.sh /workspace/.devcontainer/install-tools.sh
+RUN mkdir -p /workspace/.devcontainer && cp /tmp/install-ctf-tools.sh /workspace/.devcontainer/install-ctf-tools.sh
 
 # Default shell
 CMD [ "sleep", "infinity" ]

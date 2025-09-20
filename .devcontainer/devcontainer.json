@@ -17,9 +17,8 @@
         }
     },
     "workspaceFolder": "/workspace",
-    "postCreateCommand": "/workspace/.devcontainer/install-ctf-tools.sh",
-    "remoteUser": "vscode",
     "forwardPorts": [],
     // https://containers.dev/implementors/json_reference/
+    "postCreateCommand": "/workspace/.devcontainer/install-ctf-tools.sh",
     "shutdownAction": "stopCompose"
 }
