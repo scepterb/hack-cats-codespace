@@ -4,7 +4,6 @@
     "name": "Ignatius Hack Cats Codespace",
     "build": {
         "dockerfile": "Dockerfile",
-        "context": ".."    // runs docker in parent directory
     },
     "customizations": {
         "vscode": {
