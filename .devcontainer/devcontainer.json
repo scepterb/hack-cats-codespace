@@ -1,7 +1,7 @@
 
 // https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers
 {
-    "name": "Ignatius Hack Cats Codespace",
+    "name": "Ignatius Cyber Cats Codespace",
     "build": { 
 		"dockerfile": "Dockerfile",
 		"context": "."
